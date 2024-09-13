@@ -18,15 +18,21 @@
     }
   },
   "install": [
-    {
-      "type": "command",
-      "commands": [
-        "python3 -m pip install -r ${req-txt-file}"
-      ]
-    }
-  ],
+   {
+            "type": "command",
+            "commands": [
+                "python3 -m venv python"
+            ]
+        },
+        {
+            "type": "command",
+            "commands": [
+                "python/bin/python3 -m pip install -r requirements.txt"
+            ]
+        }
+    ],
   "run": {
-    "command": "python3 ${bot-py-file}",
+    "command": "python/bin/python3 ${bot-py-file}",
     "stopCode": 2
   },
   "environment": {
